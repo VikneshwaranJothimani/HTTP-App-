@@ -1,0 +1,27 @@
+button
+{
+    margin-left: 220px;
+}
+
+img{
+    height: 200px;
+    width: 150px;
+    
+}
+
+.font
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}

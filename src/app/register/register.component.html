@@ -1,0 +1,66 @@
+<div class="container">    
+    <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+        <div class="panel panel-info" >
+                <div class="panel-heading">
+                    <div class="panel-title">Edit User</div>
+                </div>     
+                <div style="padding-top:30px" class="panel-body" >
+                      
+                    <form #f="ngForm">                                
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" class="form-control"  name="Username"  placeholder="Username"  #Username="ngModel" ngModel required minlength="6">                                        
+                                </div>
+
+                                <div>
+                                    <p class="alert alert-danger" *ngIf="Username.errors?.['required'] && (Username.touched || Username.dirty)">Please Enter the Username</p>
+                                    <p class="alert alert-danger" *ngIf="Username.errors?.['minlength'] && Username.touched">Please Enter the Minimum 6 character</p>
+                                </div>
+                               
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input type="text" class="form-control"  name="Email" placeholder="Email" #Email="ngModel" ngModel required email>                                        
+                                </div>
+
+                                <div>
+                                    <p class="alert alert-danger" *ngIf="Email.errors?.['required'] && (Email.touched || Email.dirty)">Please Enter the Email</p>
+                                    <p class="alert alert-danger" *ngIf="Email.errors?.['email'] && Email.touched">Please Enter the Valid Email</p>
+                                </div>
+                           
+                           
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" class="form-control"  name="Password" #Password="ngModel"  placeholder="Password" ngModel required minlength="8">
+                                </div>
+                                
+                                <div>
+                                    <p class="alert alert-danger" *ngIf="Password.errors?.['required'] && (Password.touched || Password.dirty)">Please Enter the Password</p>
+                                    <p class="alert alert-danger" *ngIf="Password.errors?.['minlength'] && Password.touched">Please Enter the Valid Password</p>
+                                </div>
+                        
+                        <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+            <input type="text" class="form-control"  name="Phone"  #Phone="ngModel"  placeholder="Phone Number" ngModel pattern="^(0|[1-9][0-9]*)$" required>                                        
+                                </div>
+
+                                <div>
+                                    <p class="alert alert-danger" *ngIf="Phone.errors?.['required'] && (Phone.touched || Phone.dirty)">Please Enter the Phone</p>
+                                    <p class="alert alert-danger" *ngIf="Phone.errors?.['pattern'] && Phone.touched">Please Enter the Valid Phone</p>
+                                </div>
+                               
+                               
+                            <div style="margin-top:10px" class="form-group">
+                                <!-- Button -->
+                                <div class="col-sm-12">
+                <input type="submit" class="btn btn-success" value="Create" /> &nbsp; <button class="btn btn-warning"><a routerLink="/">Go back to login</a></button>
+                                </div>
+                            </div>
+                        </form>
+                        <br>  <br><br>
+                        
+                    </div>                     
+                </div>  
+    </div>
+
+   
+</div>

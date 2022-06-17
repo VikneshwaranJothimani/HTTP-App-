@@ -1,0 +1,72 @@
+<div class="container">
+    <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title text-center">Weather</div>
+            </div>
+            <div style="padding-top:30px" class="panel-body">
+                <img src="assets/images/weather.jpg" alt="news"
+                    style="width: 200px;height: 100px; margin-right: auto; margin-left: auto; display: block;" />
+                <br>
+                <input type="text" style="width: 100%;padding: 10px;" class="input" placeholder="Serach the city"
+                    [(ngModel)]="city">
+                <br><br>
+                <button type="button" class="btn-success" (click)="fetchWeatherData()">Search</button>
+
+            </div>
+        </div>
+
+        <div [ngStyle]="{'display' : isCreate?  'block' : 'none'}">
+
+            <img src="assets/images/loader.gif" alt="">
+
+        </div>
+        <ng-container *ngIf="errorStatus">
+
+            <div class="alert alert-danger text-center" *ngIf="(errorStatus == 400 || errorStatus == 404)"
+                [ngStyle]="{'display' : !isCreate?  'block' : 'none'}">
+                {{errormsg}}
+            </div>
+
+            <div class="container1 bg-primary" *ngIf="errorStatus == 200"
+                [ngStyle]="{'display' : !isCreate?  'block' : 'none'}" s>
+                <div>
+                    <h3> <span class="fa fa-location"></span>{{cityName}} - {{country}} <span
+                            style="float : right">{{date | date:'HH:mm - a' }}</span></h3>
+                </div>
+                <hr>
+                <div class="text-center">
+
+                    <span class="badge badge-dark">{{temperature | celsius}} <sup>o</sup> c <img src="{{icon}}"
+                            alt=""><span style="font-size: medium;">{{description}}</span></span>
+                    <br><br>
+
+                    <table class="table">
+                        <tr>
+                            <th><i class="fa-solid fa-temperature-high"></i>Temperature</th>
+                            <th><i class="fa-solid fa-droplet"></i>Humidity</th>
+                            <th><i class="fa-solid fa-wind"></i>Wind</th>
+                        </tr>
+                        <tr>
+                            <td>{{temperature}}</td>
+                            <td>{{humidity}}%</td>
+                            <td>{{wind}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <hr>
+                <div>
+                    <span style="font-size: medium; font-weight: bold;">{{date | date:"EEEE"}}</span> <span
+                        class="span">{{date | date:"MMM-dd"}}</span>
+
+                </div>
+
+            </div>
+
+
+        </ng-container>
+
+    </div>
+</div>
+
+<br><br><br><br><br><br><br>

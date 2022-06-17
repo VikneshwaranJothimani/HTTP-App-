@@ -1,0 +1,98 @@
+
+@import url(base.css);
+@import url(fontface.css);
+@import url(client-spec.css);
+@import url(gradients.css);
+@import url(buttons.css);
+@import url(navs.css);
+@import url(forms.css);
+
+@import url(sidebar.css);
+@import url(widgets.css);
+/*
+@import url(icomoon.css);
+
+@import url(redactor.css);
+@import url(selectize.css);
+@import url(selectize.bootstrap3.css);
+@import url(square/all.css);
+@import url(ion.rangeSlider.css);
+@import url(ion.rangeSlider.skinNice.css);
+@import url(pikaday.css);
+
+@import url(dropdowns.css);
+@import url(navbar.css);
+
+@import url(breadcrumbs.css);
+@import url(labels-badges.css);
+@import url(alerts.css);
+@import url(list-group.css);
+@import url(panels.css);
+@import url(jqplot.css);
+@import url(widgets.css);
+@import url(layout.css);*/
+/*.myWidget{min-height:600px;}*/
+.alert-danger {
+    background: #dd4b39 !important;
+    color: white;
+}.alert-success {
+    background: #008d4c !important;
+    color: white;
+}@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
+[data-notify="container"][class*="alert-pastel-"] {
+	background-color: rgb(255, 255, 238);
+	border-width: 0px;
+	border-left: 15px solid rgb(255, 240, 106);
+	border-radius: 0px;
+	box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
+	font-family: 'Old Standard TT', serif;
+	letter-spacing: 1px;
+}
+[data-notify="container"].alert-pastel-info {
+	border-left-color: rgb(255, 179, 40);
+}
+[data-notify="container"].alert-pastel-danger {
+	border-left-color: rgb(255, 103, 76);
+}
+[data-notify="container"][class*="alert-pastel-"] > [data-notify="title"] {
+	color: rgb(80, 80, 57);
+	display: block;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+[data-notify="container"][class*="alert-pastel-"] > [data-notify="message"] {
+	font-weight: 400;
+}
+
+.redtext{
+	color:red;
+}
+.bluetext{
+	color:blue;
+}
+@media only screen and (max-width: 767px) {
+	.m-b-10{margin-bottom:10px;}
+	
+}
+legend h4{
+	font-weight:bold;
+	color:#333;
+}
+legend {
+    display: block;
+    width: auto!important;/*100% */
+    height:auto!important;
+    padding: 10px;
+    margin-bottom:0;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    /* border-bottom: 1px solid #e5e5e5; */
+}
+fieldset {
+    min-width: 0;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #d2d2d2;
+}

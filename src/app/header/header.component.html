@@ -1,0 +1,38 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" style="margin-top : 7px;">HTTP App</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+     
+      <li class="active" style="color: white; padding: 10px;" *ngIf="!loginSer.isLoggedIn()"><a routerLink="/">Try to Login</a></li>
+     
+      <li style="color: white; padding: 10px;"> <a routerLink="/weather">Weather</a></li>
+      <li style="color: white; padding: 10px;"> <a routerLink="/news">News</a></li>
+      <li style="color: white; padding: 10px;"> <a routerLink="/movies">Movies</a></li>
+      <li style="color: white; padding: 10px;"> <a routerLink="/jokes">Jokes</a></li>
+      <li style="color: white; padding: 10px;"> <a routerLink="/register">Register</a></li>
+    
+      <li style="color: white; padding: 10px;" (click)="openPopUp()"> <a routerLink="/Logout">Logout</a></li>
+    </ul>
+
+
+  </div>
+</nav>
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle, 'backdrop-filter':blurbgc}">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable " role="document">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        <p>Are you sure you want to logout?</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="deleteUserData()">Yes,Logout</button>
+        <button type="button" class="btn btn-danger" (click)="closePopup()"> No</button>
+      </div>
+    </div>
+  </div>
+</div>
+

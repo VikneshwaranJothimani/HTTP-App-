@@ -1,0 +1,33 @@
+img
+{
+    height: 10%;
+    width: 10%;
+}
+
+th,tr,td
+{
+    text-align: center;
+    font-size: large;
+}
+
+.container1
+{
+    width: auto;
+    border: groove;
+    padding: 50px;
+    
+}
+
+.badge
+{
+    font-size:xx-large;
+}
+
+.span
+{
+    float: right;
+    font-size: medium;
+    font-weight: bold;
+}
+
+

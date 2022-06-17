@@ -1,0 +1,30 @@
+<div class="container">
+    <div style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title text-center">Jokes</div>
+            </div>
+            <div style="padding-top:30px" class="panel-body">
+                <img src="assets/images/jokes.jpg" alt="news"
+                    style="width: 200px;height: 120px; margin-right: auto; margin-left: auto; display: block;" /><br><br>
+
+                    <div [ngStyle] ="{'display' : isCreate?  'block' : 'none'}">
+                        <img src="assets/images/loader.gif" style="height: 100px; margin-left: 200px;" alt="" >
+                    </div>
+
+                <p class="text-center">
+                    {{jokes}}
+                </p>
+                <button *ngIf="jokes.length == 0 else next" class="btn btn-success " (click)="displayJokes()">Start Jokes</button>
+
+              <ng-template #next>
+                <button class="btn btn-success" (click)="displayJokes()">Next</button>
+              </ng-template>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<br><br><br><br><br><br><br>
